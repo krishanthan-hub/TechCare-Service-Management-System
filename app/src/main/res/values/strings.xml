@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">TechCare Services</string>
+    <string name="tagline">Repair. Track. Relax.</string>
+    <string name="login">LOG IN</string>
+    <string name="register">CREATE ACCOUNT</string>
+    <string name="email_phone_hint">Email / Phone</string>
+    <string name="password_hint">Password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="create_account">Create Account</string>
+    <string name="already_account">Already have an account? Log In</string>
+    <string name="terms_text">By continuing you agree to our Terms &amp; Privacy Policy</string>
+    <string name="book_now">Book Now</string>
+    <string name="confirm_booking">CONFIRM BOOKING</string>
+    <string name="track_repair">TRACK MY REPAIR</string>
+    <string name="contact_support">CONTACT SUPPORT</string>
+    <string name="logout">Logout</string>
+    <string name="home">Home</string>
+    <string name="services">Services</string>
+    <string name="bookings">Bookings</string>
+    <string name="notifications">Notifications</string>
+    <string name="profile">Profile</string>
+    <string name="device_mobile">Mobile</string>
+    <string name="device_laptop">Laptop</string>
+    <string name="device_tv">TV</string>
+    <string name="device_ac">AC</string>
+    <string name="device_fridge">Fridge</string>
+    <string name="what_needs_fixing_today">What needs fixing today?</string>
+</resources>

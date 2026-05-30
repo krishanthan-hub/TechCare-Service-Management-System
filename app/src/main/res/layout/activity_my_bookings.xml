@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@color/primary"
+        android:gravity="center_vertical"
+        android:paddingStart="8dp">
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="40dp" android:layout_height="40dp"
+            android:src="@drawable/ic_back"
+            android:tint="@color/white"
+            android:background="?attr/selectableItemBackgroundBorderless"/>
+        <TextView
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="My Bookings" android:textColor="@color/white"
+            android:textSize="18sp" android:textStyle="bold"/>
+    </LinearLayout>
+
+    <!-- Tab Bar -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:elevation="2dp">
+
+        <TextView android:id="@+id/tabActive"
+            android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:gravity="center"
+            android:text="Active" android:textSize="14sp"
+            android:textStyle="bold" android:textColor="@color/primary"
+            android:background="@color/accent_light"
+            android:clickable="true" android:focusable="true"/>
+
+        <TextView android:id="@+id/tabCompleted"
+            android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:gravity="center"
+            android:text="Completed" android:textSize="14sp"
+            android:textColor="@color/text_secondary"
+            android:background="@color/white"
+            android:clickable="true" android:focusable="true"/>
+
+        <TextView android:id="@+id/tabCancelled"
+            android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:gravity="center"
+            android:text="Cancelled" android:textSize="14sp"
+            android:textColor="@color/text_secondary"
+            android:background="@color/white"
+            android:clickable="true" android:focusable="true"/>
+
+    </LinearLayout>
+
+    <!-- Empty State -->
+    <TextView android:id="@+id/tvEmpty"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="No bookings found"
+        android:textSize="14sp"
+        android:textColor="@color/text_secondary"
+        android:visibility="gone"/>
+
+    <!-- Bookings List -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvBookings"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="12dp"
+        android:clipToPadding="false"/>
+
+    <!-- Bottom Navigation -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:elevation="8dp">
+
+        <LinearLayout android:id="@+id/navHome"
+            android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:orientation="vertical"
+            android:gravity="center" android:clickable="true" android:focusable="true">
+            <ImageView android:layout_width="24dp" android:layout_height="24dp"
+                android:src="@drawable/ic_nav_home"
+                app:tint="@color/text_secondary"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Home" android:textSize="10sp"
+                android:textColor="@color/text_secondary"/>
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/navServices"
+            android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:orientation="vertical"
+            android:gravity="center" android:clickable="true" android:focusable="true">
+            <ImageView android:layout_width="24dp" android:layout_height="24dp"
+                android:src="@drawable/ic_nav_services"
+                app:tint="@color/text_secondary"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Services" android:textSize="10sp"
+                android:textColor="@color/text_secondary"/>
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/navBookings"
+            android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:orientation="vertical"
+            android:gravity="center" android:clickable="true" android:focusable="true">
+            <ImageView android:layout_width="24dp" android:layout_height="24dp"
+                android:src="@drawable/ic_nav_bookings"
+                app:tint="@color/primary"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Bookings" android:textSize="10sp"
+                android:textColor="@color/primary"
+                android:textStyle="bold"/>
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/navAlerts"
+            android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:orientation="vertical"
+            android:gravity="center" android:clickable="true" android:focusable="true">
+            <ImageView android:layout_width="24dp" android:layout_height="24dp"
+                android:src="@drawable/ic_nav_alerts"
+                app:tint="@color/text_secondary"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Alerts" android:textSize="10sp"
+                android:textColor="@color/text_secondary"/>
+        </LinearLayout>
+
+        <LinearLayout android:id="@+id/navProfile"
+            android:layout_width="0dp" android:layout_height="match_parent"
+            android:layout_weight="1" android:orientation="vertical"
+            android:gravity="center" android:clickable="true" android:focusable="true">
+            <ImageView android:layout_width="24dp" android:layout_height="24dp"
+                android:src="@drawable/ic_nav_profile"
+                app:tint="@color/text_secondary"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Profile" android:textSize="10sp"
+                android:textColor="@color/text_secondary"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

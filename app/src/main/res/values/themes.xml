@@ -1,0 +1,81 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Theme.TechCare" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primary_dark</item>
+        <item name="colorAccent">@color/accent</item>
+        <item name="android:windowBackground">@color/background</item>
+        <item name="android:statusBarColor">@color/primary_dark</item>
+
+        <!-- Standard Alert Dialog Theme -->
+        <item name="alertDialogTheme">@style/TechCareAlertDialogTheme</item>
+        <!-- Material Alert Dialog Theme -->
+        <item name="materialAlertDialogTheme">@style/TechCareAlertDialogTheme</item>
+    </style>
+
+    <!-- Dialog Theme Overlay -->
+    <style name="TechCareAlertDialogTheme" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <!-- Dialog Title Style -->
+        <item name="materialAlertDialogTitleTextStyle">@style/TechCareDialogTitleText</item>
+        <!-- Dialog Body/Message Style -->
+        <item name="materialAlertDialogBodyTextStyle">@style/TechCareDialogBodyText</item>
+        <!-- Dialog Appearance -->
+        <item name="shapeAppearance">@style/TechCareDialogShape</item>
+        <item name="backgroundTint">@color/white</item>
+        <!-- Dialog Button Styles -->
+        <item name="buttonBarPositiveButtonStyle">@style/TechCareDialogButtonStyle</item>
+        <item name="buttonBarNegativeButtonStyle">@style/TechCareDialogButtonStyle</item>
+    </style>
+
+    <!-- Style for Dialog Buttons (Positive/Negative) -->
+    <style name="TechCareDialogButtonStyle" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">true</item>
+    </style>
+
+    <!-- Style for Dialog Body/Message Text -->
+    <style name="TechCareDialogBodyText" parent="MaterialAlertDialog.MaterialComponents.Body.Text">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/text_secondary</item>
+    </style>
+
+    <style name="TechCareDialogTitleText" parent="MaterialAlertDialog.MaterialComponents.Title.Text">
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="TechCareDialogShape" parent="ShapeAppearance.MaterialComponents.MediumComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">28dp</item>
+    </style>
+
+    <style name="TechCareButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:background">@drawable/bg_button_primary</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:letterSpacing">0.05</item>
+        <item name="android:paddingTop">14dp</item>
+        <item name="android:paddingBottom">14dp</item>
+        <item name="backgroundTint">@null</item>
+    </style>
+
+    <style name="TechCareButtonOutline" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="strokeColor">@color/primary</item>
+        <item name="android:textColor">@color/primary</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="cornerRadius">8dp</item>
+    </style>
+
+    <style name="TimeSlotStyle">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">@dimen/time_slot_height</item>
+        <item name="android:layout_margin">4dp</item>
+        <item name="android:background">@drawable/bg_slot_unselected</item>
+        <item name="android:textColor">@color/text_primary</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">14sp</item>
+        <item name="layout_columnWeight">1</item>
+    </style>
+</resources>

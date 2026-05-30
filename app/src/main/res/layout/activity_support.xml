@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:layout_width="match_parent" android:layout_height="56dp"
+        android:background="@color/primary"
+        android:gravity="center_vertical" android:paddingStart="8dp">
+        <ImageButton android:id="@+id/btnBack"
+            android:layout_width="40dp" android:layout_height="40dp"
+            android:src="@drawable/ic_back"
+            android:tint="@color/white"
+            android:background="?attr/selectableItemBackgroundBorderless"/>
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="FAQs &amp; Support" android:textColor="@color/white"
+            android:textSize="18sp" android:textStyle="bold"/>
+    </LinearLayout>
+
+    <ScrollView android:layout_width="match_parent" android:layout_height="match_parent">
+        <LinearLayout android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" android:padding="16dp">
+
+            <!-- Quick Contact -->
+            <LinearLayout android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" android:layout_marginBottom="20dp">
+
+                <androidx.cardview.widget.CardView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/cardCall"
+                    android:layout_width="0dp" android:layout_height="80dp"
+                    android:layout_weight="1" android:layout_marginEnd="8dp"
+                    app:cardCornerRadius="12dp" app:cardElevation="3dp"
+                    app:cardBackgroundColor="@color/primary">
+                    <LinearLayout android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical" android:gravity="center">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="📞" android:textSize="22sp"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Call Us" android:textColor="@color/white"
+                            android:textStyle="bold" android:textSize="13sp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:id="@+id/cardChat"
+                    android:layout_width="0dp" android:layout_height="80dp"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="12dp" app:cardElevation="3dp"
+                    app:cardBackgroundColor="@color/accent">
+                    <LinearLayout android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical" android:gravity="center">
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="💬" android:textSize="22sp"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="Email Us" android:textColor="@color/white"
+                            android:textStyle="bold" android:textSize="13sp"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Frequently Asked Questions"
+                android:textSize="16sp" android:textStyle="bold"
+                android:textColor="@color/text_primary" android:layout_marginBottom="12dp"/>
+
+            <!-- FAQ Items (static) -->
+            <androidx.cardview.widget.CardView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                app:cardCornerRadius="10dp" app:cardElevation="2dp"
+                app:cardBackgroundColor="@color/white">
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="14dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="How do I track my repair?"
+                        android:textSize="14sp" android:textStyle="bold" android:textColor="@color/text_primary"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Go to My Bookings and tap the booking card to see the full repair progress timeline."
+                        android:textSize="12sp" android:textColor="@color/text_secondary"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                app:cardCornerRadius="10dp" app:cardElevation="2dp"
+                app:cardBackgroundColor="@color/white">
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="14dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="How long does a repair take?"
+                        android:textSize="14sp" android:textStyle="bold" android:textColor="@color/text_primary"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Most repairs take 1-3 business days depending on the issue and part availability."
+                        android:textSize="12sp" android:textColor="@color/text_secondary"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                app:cardCornerRadius="10dp" app:cardElevation="2dp"
+                app:cardBackgroundColor="@color/white">
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="14dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Is there a warranty on repairs?"
+                        android:textSize="14sp" android:textStyle="bold" android:textColor="@color/text_primary"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Yes, all repairs come with a 30-day workmanship warranty."
+                        android:textSize="12sp" android:textColor="@color/text_secondary"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                app:cardCornerRadius="10dp" app:cardElevation="2dp"
+                app:cardBackgroundColor="@color/white">
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="14dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="What payment methods are accepted?"
+                        android:textSize="14sp" android:textStyle="bold" android:textColor="@color/text_primary"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="We accept cash on delivery and online bank transfers to our account."
+                        android:textSize="12sp" android:textColor="@color/text_secondary"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                app:cardCornerRadius="10dp" app:cardElevation="2dp"
+                app:cardBackgroundColor="@color/white">
+                <LinearLayout android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" android:padding="14dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="Can I cancel my booking?"
+                        android:textSize="14sp" android:textStyle="bold" android:textColor="@color/text_primary"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Yes, you can cancel up to 2 hours before the scheduled pickup or drop-off."
+                        android:textSize="12sp" android:textColor="@color/text_secondary"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <Space android:layout_width="match_parent" android:layout_height="16dp"/>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <LinearLayout
+        android:id="@+id/mainContent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Header -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/primary"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:gravity="center_vertical">
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/tvGreeting"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Good Morning!"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:textStyle="bold"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/what_needs_fixing_today"
+                    android:textColor="#BBDEFB"
+                    android:textSize="13sp"/>
+            </LinearLayout>
+            <FrameLayout
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:background="@drawable/bg_circle_white">
+                <TextView
+                    android:id="@+id/tvAvatar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="J"
+                    android:textColor="@color/primary"
+                    android:textSize="18sp"
+                    android:textStyle="bold"/>
+            </FrameLayout>
+        </LinearLayout>
+
+        <!-- Search Bar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/primary"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="14dp">
+            <EditText
+                android:id="@+id/etSearch"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@drawable/bg_search"
+                android:hint="Search services..."
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:inputType="text"
+                android:textSize="14sp"
+                android:singleLine="true"/>
+        </LinearLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Active Repair Banner -->
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardActiveBooking"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:visibility="gone"
+                    app:cardCornerRadius="12dp"
+                    app:cardBackgroundColor="@color/accent_light"
+                    app:cardElevation="2dp">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="14dp"
+                        android:gravity="center_vertical">
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Active Repair"
+                                android:textStyle="bold"
+                                android:textColor="@color/primary"
+                                android:textSize="14sp"/>
+                            <TextView
+                                android:id="@+id/tvActiveDevice"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="13sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/text_primary"/>
+                            <TextView
+                                android:id="@+id/tvActiveStatus"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="13sp"
+                                android:textStyle="bold"
+                                android:textColor="@color/warning"/>
+                        </LinearLayout>
+                        <TextView
+                            android:id="@+id/tvTrackLink"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Track →"
+                            android:textColor="@color/primary"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <!-- Browse by Device -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="20dp"
+                    android:text="Browse by Device"
+                    android:textStyle="bold"
+                    android:textSize="16sp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="12dp"
+                    android:weightSum="6">
+                    <LinearLayout android:id="@+id/chipMobile" android:layout_width="0dp" android:layout_height="72dp" android:layout_weight="1" android:orientation="vertical" android:gravity="center" android:background="@drawable/bg_device_chip" android:layout_margin="4dp">
+                        <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_mobile" android:layout_marginBottom="4dp"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Mobile" android:textSize="10sp"/>
+                    </LinearLayout>
+                    <LinearLayout android:id="@+id/chipLaptop" android:layout_width="0dp" android:layout_height="72dp" android:layout_weight="1" android:orientation="vertical" android:gravity="center" android:background="@drawable/bg_device_chip" android:layout_margin="4dp">
+                        <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_laptop" android:layout_marginBottom="4dp"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Laptop" android:textSize="10sp"/>
+                    </LinearLayout>
+                    <LinearLayout android:id="@+id/chipTV" android:layout_width="0dp" android:layout_height="72dp" android:layout_weight="1" android:orientation="vertical" android:gravity="center" android:background="@drawable/bg_device_chip" android:layout_margin="4dp">
+                        <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_tv" android:layout_marginBottom="4dp"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="TV" android:textSize="10sp"/>
+                    </LinearLayout>
+                    <LinearLayout android:id="@+id/chipAC" android:layout_width="0dp" android:layout_height="72dp" android:layout_weight="1" android:orientation="vertical" android:gravity="center" android:background="@drawable/bg_device_chip" android:layout_margin="4dp">
+                        <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_ac" android:layout_marginBottom="4dp"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="AC" android:textSize="10sp"/>
+                    </LinearLayout>
+                    <LinearLayout android:id="@+id/chipFridge" android:layout_width="0dp" android:layout_height="72dp" android:layout_weight="1" android:orientation="vertical" android:gravity="center" android:background="@drawable/bg_device_chip" android:layout_margin="4dp">
+                        <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_fridge" android:layout_marginBottom="4dp"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Fridge" android:textSize="10sp"/>
+                    </LinearLayout>
+                    <LinearLayout android:id="@+id/chipWasher" android:layout_width="0dp" android:layout_height="72dp" android:layout_weight="1" android:orientation="vertical" android:gravity="center" android:background="@drawable/bg_device_chip" android:layout_margin="4dp">
+                        <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_washer" android:layout_marginBottom="4dp"/>
+                        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Washer" android:textSize="10sp"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!-- Popular Services -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Popular Services"
+                        android:textStyle="bold"
+                        android:textSize="16sp"/>
+                    <TextView
+                        android:id="@+id/tvSeeAll"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="See all"
+                        android:textColor="@color/primary"
+                        android:textStyle="bold"/>
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvServices"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:nestedScrollingEnabled="false"
+                    tools:listitem="@layout/item_service"/>
+
+                <!-- Tip Banner -->
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardBackgroundColor="@color/tip_bg"
+                    app:cardElevation="0dp">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp"
+                        android:text="Tip: Clean AC filters every 3 months for efficiency."
+                        android:textColor="@color/text_primary"/>
+                </androidx.cardview.widget.CardView>
+
+                <Space android:layout_width="match_parent" android:layout_height="80dp"/>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <!-- Bottom Navigation -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:elevation="8dp">
+            <LinearLayout android:id="@+id/navHome" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_nav_home" app:tint="@color/primary"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Home" android:textSize="10sp" android:textColor="@color/primary" android:textStyle="bold"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/navServices" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:orientation="vertical" android:gravity="center"
+                tools:ignore="UseCompoundDrawables">
+                <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_nav_services" app:tint="@color/text_secondary"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Services" android:textSize="10sp" android:textColor="@color/text_secondary"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/navBookings" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_nav_bookings" app:tint="@color/text_secondary"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Bookings" android:textSize="10sp" android:textColor="@color/text_secondary"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/navAlerts" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_nav_alerts" app:tint="@color/text_secondary"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Alerts" android:textSize="10sp" android:textColor="@color/text_secondary"/>
+            </LinearLayout>
+            <LinearLayout android:id="@+id/navProfile" android:layout_width="0dp" android:layout_height="match_parent" android:layout_weight="1" android:orientation="vertical" android:gravity="center">
+                <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_nav_profile" app:tint="@color/text_secondary"/>
+                <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Profile" android:textSize="10sp" android:textColor="@color/text_secondary"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Search Overlay -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/searchDropdown"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="148dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:visibility="gone"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="8dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvSearchResults"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxHeight="280dp"
+                android:padding="8dp" />
+
+            <TextView
+                android:id="@+id/tvNoResults"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="24dp"
+                android:text="No services found matching your search."
+                android:textAlignment="center"
+                android:textColor="@color/text_secondary"
+                android:visibility="gone" />
+        </FrameLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.TechCare"
+        tools:targetApi="31">
+
+        <!-- SPLASH is the launcher -->
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.TechCare">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <!-- AUTH -->
+        <activity android:name=".auth.LoginActivity" android:exported="false"/>
+        <activity android:name=".auth.RegisterActivity" android:exported="false"/>
+
+        <!-- HOME -->
+        <activity
+            android:name=".home.HomeActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- SERVICES -->
+        <activity android:name=".services.ServicesActivity" android:exported="false"/>
+
+        <!-- BOOKING -->
+        <activity android:name=".booking.BookingActivity" android:exported="false"/>
+        <activity android:name=".booking.MyBookingsActivity" android:exported="false"/>
+        <activity android:name=".booking.ConfirmationActivity" android:exported="false"/>
+
+        <!-- PROFILE -->
+        <activity android:name=".profile.ProfileActivity" android:exported="false"/>
+
+        <!-- SUPPORT -->
+        <activity android:name=".support.SupportActivity" android:exported="false"/>
+
+        <activity android:name=".notifications.NotificationsActivity" android:exported="false"/>
+
+        <activity android:name=".booking.TrackRepairActivity" android:exported="false"/>
+
+    </application>
+</manifest>
