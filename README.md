@@ -67,30 +67,30 @@ Repair Tracking Module
 Notification Module
 User Profile Module
 Firebase Database Integration
+
 Screenshots
-Login Screen
+## Screenshots
 
-User authentication interface with secure login functionality.
+### Login Screen
+![Login Screen](screenshots/login-screen.png)
 
-Home Dashboard
+### Home Screen
+![Home Screen](screenshots/home-screen.png)
 
-Displays active repairs, service categories, and popular services.
+### Book Service
+![Book Service](screenshots/booking-screen.png)
 
-Service Booking
+### Booking Confirmation
+![Booking Confirmation](screenshots/booking-confirmation.png)
 
-Allows users to submit repair requests and upload device information.
+### Track Repair
+![Track Repair](screenshots/track-repair.png)
 
-Repair Tracking
+### Notifications
+![Notifications](screenshots/notifications-screen.png)
 
-Provides real-time repair status updates and technician information.
-
-Notifications
-
-Displays booking confirmations and repair progress alerts.
-
-User Profile
-
-Manages account information, booking history, and saved devices.
+### Profile
+![Profile](screenshots/profile-screen.png)
 
 Installation
 Clone Repository
